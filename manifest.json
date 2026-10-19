@@ -1,0 +1,26 @@
+{
+  "name": "Senku",
+  "short_name": "Senku",
+  "description": "El solitario de clavijas: salta bolas hasta dejar solo una.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3e6cf",
+  "theme_color": "#f3e6cf",
+  "lang": "es",
+  "categories": [
+    "games"
+  ],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

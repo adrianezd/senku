@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Senku — solitario de clavijas gratis online</title>
+<meta name="description" content="Juega gratis al senku, el solitario de clavijas de toda la vida: salta bolas hasta dejar solo una. Tablero inglés, europeo y triangular, con deshacer, pistas y récords. Sin descargas.">
+<meta name="keywords" content="senku, solitario de clavijas, senku online, juego del senku, peg solitaire, solitario de bolas, juego de mesa de un jugador">
+<link rel="canonical" href="https://adrianezd.github.io/senku/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="icon-512.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#f3e6cf" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c140d" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Senku — solitario de clavijas">
+<meta property="og:description" content="Salta bolas hasta dejar solo una. Tablero inglés, europeo y triangular. Gratis y sin descargas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adrianezd.github.io/senku/">
+<meta property="og:image" content="https://adrianezd.github.io/senku/og-image.png">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":["WebApplication","Game"],"name":"Senku","url":"https://adrianezd.github.io/senku/","description":"El solitario de clavijas: salta bolas hasta dejar solo una. Tablero inglés, europeo y triangular.","inLanguage":"es","applicationCategory":"GameApplication","operatingSystem":"Any","isAccessibleForFree":true,"numberOfPlayers":{"@type":"QuantitativeValue","value":1},"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo se juega al senku?","acceptedAnswer":{"@type":"Answer","text":"Una bola salta por encima de otra que tenga al lado, en línea recta, hasta un hueco vacío. La bola saltada se quita. Se gana dejando una sola bola."}},{"@type":"Question","name":"¿Tiene solución el senku inglés?","acceptedAnswer":{"@type":"Answer","text":"Sí. Empezando con el centro vacío se puede acabar con una sola bola, e incluso en el centro."}}]}]}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo" aria-hidden="true">⚪</span><div><h1>Senku</h1><p>El solitario de clavijas</p></div></div>
+  <label class="snd"><input type="checkbox" id="sound"> Sonido</label>
+</header>
+
+<main>
+  <nav class="tabs" id="tabs" aria-label="Tablero"></nav>
+
+  <section class="stats" aria-label="Partida">
+    <div><span>Bolas</span><strong id="left">32</strong></div>
+    <div><span>Saltos</span><strong id="moves">0</strong></div>
+    <div><span>Récord</span><strong id="best">—</strong></div>
+  </section>
+
+  <div class="table">
+    <div class="board" id="board" role="grid" aria-label="Tablero de senku"></div>
+  </div>
+  <p class="msg" id="msg" role="status"></p>
+
+  <div class="actions">
+    <button type="button" class="btn" id="undo">↶ Deshacer</button>
+    <button type="button" class="btn" id="hint">💡 Pista</button>
+    <button type="button" class="btn" id="restart">⟳ Empezar</button>
+  </div>
+
+  <div class="end" id="end" hidden>
+    <div class="end-card" role="dialog" aria-labelledby="end-title">
+      <span class="end-emoji" id="end-emoji">🏆</span>
+      <h2 id="end-title">¡Genio!</h2>
+      <p id="end-text"></p>
+      <button type="button" class="btn btn-main" id="again">Otra vez</button>
+    </div>
+  </div>
+
+  <section class="info">
+    <h2>Cómo se juega</h2>
+    <ol>
+      <li>Toca una bola que pueda saltar: se marcan los huecos a los que puede ir.</li>
+      <li>Toca el hueco. La bola salta por encima de la de al lado, que se quita del tablero.</li>
+      <li>Solo se salta en línea recta y sobre una bola, nunca en diagonal (en el triángulo, en sus seis direcciones).</li>
+      <li>La partida acaba cuando ninguna bola puede saltar. Cuantas menos queden, mejor. Con una sola, lo has resuelto.</li>
+    </ol>
+    <h2>Trucos</h2>
+    <ul>
+      <li>Despeja primero los brazos de la cruz y deja el centro para el final.</li>
+      <li>Evita dejar bolas sueltas en las esquinas: luego no hay quien las saque.</li>
+      <li>Si te atascas, «Pista» busca un salto que aún pueda acabar bien.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Más juegos gratis en <a href="https://adrianezd.github.io/portal/">el portal</a>.</p>
+</footer>
+<script src="script.js?v=1"></script>
+</body>
+</html>
